@@ -1,42 +1,12 @@
-const jwt = require('jsonwebtoken');
-const User = require('../models/User');
+const express = require('express');
+const router = express.Router();
+const { register, login, getProfile, updateProfile } = require('../controllers/authController');
+const { auth } = require('../middleware/auth');
+const { validate, userValidation } = require('../middleware/validation');
 
-const auth = async (req, res, next) => {
-    try {
-        const token = req.header('Authorization')?.replace('Bearer ', '');
-        
-        if (!token) {
-            throw new Error();
-        }
+router.post('/register', validate(userValidation.register), register);
+router.post('/login', validate(userValidation.login), login);
+router.get('/profile', auth, getProfile);
+router.put('/profile', auth, updateProfile);
 
-        const decoded = jwt.verify(token, process.env.JWT_SECRET);
-        const user = await User.findById(decoded.id);
-        
-        if (!user) {
-            throw new Error();
-        }
-
-        req.user = user;
-        req.userId = user.id;
-        req.token = token;
-        next();
-    } catch (error) {
-        res.status(401).json({ error: 'Please authenticate' });
-    }
-};
-
-const isAdmin = async (req, res, next) => {
-    if (req.user.role !== 'admin') {
-        return res.status(403).json({ error: 'Access denied. Admin only.' });
-    }
-    next();
-};
-
-const isCustomer = async (req, res, next) => {
-    if (req.user.role !== 'customer' && req.user.role !== 'admin') {
-        return res.status(403).json({ error: 'Access denied.' });
-    }
-    next();
-};
-
-module.exports = { auth, isAdmin, isCustomer };
+module.exports = router;
