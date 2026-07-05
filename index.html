@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KKK Kar Wash - Premium Car Wash Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-car-front-fill"></i> KKK Kar Wash
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white ms-2" href="login.html">
+                            <i class="bi bi-box-arrow-in-right"></i> Login
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-primary text-white ms-2" href="register.html">
+                            Register
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row min-vh-100 align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-3 fw-bold">Premium Car Wash <br><span class="text-primary">Made Easy</span></h1>
+                    <p class="lead">Book your car wash online in seconds. Professional service, guaranteed satisfaction.</p>
+                    <div class="d-flex gap-3">
+                        <a href="register.html" class="btn btn-primary btn-lg">
+                            <i class="bi bi-calendar-plus"></i> Book Now
+                        </a>
+                        <a href="#services" class="btn btn-outline-light btn-lg">Learn More</a>
+                    </div>
+                    <div class="mt-4 d-flex gap-4">
+                        <div>
+                            <i class="bi bi-clock text-primary fs-3"></i>
+                            <span class="ms-2">Fast Service</span>
+                        </div>
+                        <div>
+                            <i class="bi bi-shield-check text-primary fs-3"></i>
+                            <span class="ms-2">Professional</span>
+                        </div>
+                        <div>
+                            <i class="bi bi-star-fill text-primary fs-3"></i>
+                            <span class="ms-2">5-Star Rating</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1520340356584-6ab2e9b7c4b9?w=600" alt="Car Wash" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Services</h2>
+            <p class="text-center text-muted mb-5">Choose from our range of professional car wash services</p>
+            <div class="row g-4" id="services-container">
+                <!-- Services will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1587831817792-56b1a3e05f5c?w=600" alt="About Us" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    <h2>Why Choose KKK Kar Wash?</h2>
+                    <p class="lead">We provide premium car wash services with convenience at your fingertips.</p>
+                    <div class="mt-4">
+                        <div class="d-flex mb-3">
+                            <i class="bi bi-check-circle-fill text-primary me-3 fs-4"></i>
+                            <div>
+                                <h5>Easy Online Booking</h5>
+                                <p class="text-muted">Book your appointment in just a few clicks</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <i class="bi bi-check-circle-fill text-primary me-3 fs-4"></i>
+                            <div>
+                                <h5>Professional Service</h5>
+                                <p class="text-muted">Trained professionals with quality products</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <i class="bi bi-check-circle-fill text-primary me-3 fs-4"></i>
+                            <div>
+                                <h5>Flexible Scheduling</h5>
+                                <p class="text-muted">Choose a time that works for you</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Get In Touch</h2>
+            <div class="row">
+                <div class="col-lg-6 mx-auto">
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-control" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2024 KKK Kar Wash. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/services.js"></script>
+</body>
+</html>
