@@ -1,0 +1,202 @@
+/* Custom styles for KKK Kar Wash */
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: white;
+    padding: 80px 0;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+}
+
+/* Cards */
+.card {
+    border-radius: 12px;
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Service Cards */
+.service-card .card {
+    height: 100%;
+}
+
+.service-card .card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card .card-text {
+    flex-grow: 1;
+}
+
+/* Status Badges */
+.badge-pending {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.badge-confirmed {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.badge-completed {
+    background-color: #198754;
+    color: white;
+}
+
+.badge-cancelled {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Buttons */
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    padding: 12px 24px;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Navbar */
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,0.8);
+    transition: color 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: white;
+}
+
+/* Forms */
+.form-control:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeInUp 0.5s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-section .d-flex {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .hero-section .btn {
+        width: 100%;
+    }
+}
+
+/* Dashboard Stats */
+.stat-card {
+    border-left: 4px solid;
+    padding: 20px;
+}
+
+.stat-card.primary {
+    border-color: #667eea;
+}
+
+.stat-card.success {
+    border-color: #198754;
+}
+
+.stat-card.info {
+    border-color: #0dcaf0;
+}
+
+/* Table */
+.table-hover tbody tr:hover {
+    background-color: rgba(102, 126, 234, 0.05);
+    cursor: pointer;
+}
+
+/* Modal */
+.modal-content {
+    border-radius: 16px;
+}
+
+.modal-header {
+    border-bottom: 1px solid #e9ecef;
+}
+
+.modal-footer {
+    border-top: 1px solid #e9ecef;
+}
+
+/* Footer */
+footer {
+    margin-top: 60px;
+}
+
+/* Loading Spinner */
+.spinner-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* Payment Modal */
+.payment-methods {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.payment-methods .btn {
+    padding: 1rem 2rem;
+    border-radius: 12px;
+}
+
+/* Print styles */
+@media print {
+    .navbar,
+    .btn,
+    .no-print {
+        display: none !important;
+    }
+}
